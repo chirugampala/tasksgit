@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript to find prime number or not!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        <h2>JavaScript to find Prime number or not!</h2>
+        
+        <div id="prime"></div>
+        <div id="notprime"></div>
+        <script>
+            for (num=1;num<=100;num++){
+                var count=0;
+                for (i=1;i<=num;i++){
+                    if(num%i==0){
+                        count=count+1;
+                    } 
+                } 
+                var primeDiv = document.getElementById("prime");
+                var primeDiv = document.getElementById("notprime");
+                if (count==2){
+                    primeDiv.innerHTML=primeDiv.innerHTML+"<br>"+num+" "+"is a prime number";
+                }else{
+                    primeDiv.innerHTML=primeDiv.innerHTML+"<br>"+num+" "+"is a nonprime number";
+                }
+            }  
+        </script>
+    </body>
+</html>
